@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq3mxph1nyjlc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjlbw"]
+size = Vector2(1272, 156)
+
+[node name="MainScene" type="Node2D"]
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 1172.0
+offset_bottom = 675.0
+
+[node name="Group" type="ColorRect" parent="."]
+offset_top = 552.0
+offset_right = 1174.0
+offset_bottom = 678.0
+color = Color(0.345098, 0.345098, 0.345098, 1)
+
+[node name="GroupBody" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroupBody"]
+position = Vector2(602, 630)
+shape = SubResource("RectangleShape2D_yjlbw")
