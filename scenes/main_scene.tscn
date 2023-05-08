@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq3mxph1nyjlc"]
+[gd_scene load_steps=3 format=3 uid="uid://cq3mxph1nyjlc"]
+
+[ext_resource type="PackedScene" uid="uid://csqyajqi7kir6" path="res://scenes/player.tscn" id="1_5jyl2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjlbw"]
 size = Vector2(1272, 156)
@@ -6,12 +8,13 @@ size = Vector2(1272, 156)
 [node name="MainScene" type="Node2D"]
 
 [node name="BG" type="ColorRect" parent="."]
-offset_left = -2.0
+offset_left = -160.0
 offset_top = -3.0
 offset_right = 1172.0
 offset_bottom = 675.0
 
 [node name="Group" type="ColorRect" parent="."]
+offset_left = -120.0
 offset_top = 552.0
 offset_right = 1174.0
 offset_bottom = 678.0
@@ -22,3 +25,10 @@ color = Color(0.345098, 0.345098, 0.345098, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GroupBody"]
 position = Vector2(602, 630)
 shape = SubResource("RectangleShape2D_yjlbw")
+
+[node name="Player" parent="." instance=ExtResource("1_5jyl2")]
+position = Vector2(38, 488)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(247, 449)
+zoom = Vector2(2, 2)
