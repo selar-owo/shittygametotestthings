@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct4338fyioi7h"]
+
+[ext_resource type="Texture2D" uid="uid://dvhxfd4b4anam" path="res://sprites/cactus.png" id="1_41bd3"]
+[ext_resource type="Script" path="res://scripts/cactus.gd" id="1_ho4un"]
+[ext_resource type="Script" path="res://scripts/KillBox.gd" id="2_hjubn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voxb5"]
+size = Vector2(14, 16)
+
+[node name="Cactus" type="CharacterBody2D"]
+script = ExtResource("1_ho4un")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_41bd3")
+
+[node name="KillBox" type="Area2D" parent="."]
+script = ExtResource("2_hjubn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_voxb5")
+
+[node name="KillComponent" type="Node2D" parent="."]

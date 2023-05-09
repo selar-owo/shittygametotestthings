@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq3mxph1nyjlc"]
+[gd_scene load_steps=4 format=3 uid="uid://cq3mxph1nyjlc"]
 
 [ext_resource type="PackedScene" uid="uid://csqyajqi7kir6" path="res://scenes/player.tscn" id="1_5jyl2"]
+[ext_resource type="PackedScene" uid="uid://ct4338fyioi7h" path="res://scenes/objects/cactus.tscn" id="2_n40kg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjlbw"]
 size = Vector2(1272, 156)
@@ -28,6 +29,11 @@ shape = SubResource("RectangleShape2D_yjlbw")
 
 [node name="Player" parent="." instance=ExtResource("1_5jyl2")]
 position = Vector2(38, 488)
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Cactus" parent="Objects" instance=ExtResource("2_n40kg")]
+position = Vector2(530, 544)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(247, 449)
